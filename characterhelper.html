@@ -1,0 +1,35 @@
+<head>
+  <title>characterhelper</title>
+</head>
+
+<body>
+{{>main}}
+<h1>Character Utility</h1>  
+
+<form class="new-task">
+        <input type="text" name="text" placeholder="Type to add new tasks" />
+      </form>
+</body>
+
+<template name="main">
+<h2> Characters ({{numberCharacters}})  </h2> 
+
+<table id="charList" class="sortby-{{sort}}">
+  <thead>
+  <tr>
+    <th>Name</th>
+  </tr>  
+  </thead>
+  <tbody>
+    {{#each characters}}
+    <tr>
+      <td>...</td>
+      <td>{{name}}</td>
+      <td></td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+
+ 
+</template>
