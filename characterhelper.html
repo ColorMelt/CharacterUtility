@@ -6,6 +6,9 @@
   <div class="container">
     <header>
       <h1>Character List</h1>
+       <form class="new-character">
+        <input type="text" name="text" placeholder="Type to add new character" />
+      </form>
     </header>
  
     <ul>
@@ -17,5 +20,11 @@
 </body>
  
 <template name="character">
-  <li>{{text}}</li>
+    <li class="{{#if checked}}checked{{/if}}">
+    <button class="delete">&times;</button>
+ 
+    <input type="checkbox" checked="{{checked}}" class="toggle-checked" />
+ 
+    <span class="text">{{text}}</span>
+  </li>
 </template>
