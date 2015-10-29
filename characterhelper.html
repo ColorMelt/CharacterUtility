@@ -1,35 +1,21 @@
 <head>
-  <title>characterhelper</title>
+  <title>CharacterUtil</title>
 </head>
-
-<body>
-{{>main}}
-<h1>Character Utility</h1>  
-
-<form class="new-task">
-        <input type="text" name="text" placeholder="Type to add new tasks" />
-      </form>
-</body>
-
-<template name="main">
-<h2> Characters ({{numberCharacters}})  </h2> 
-
-<table id="charList" class="sortby-{{sort}}">
-  <thead>
-  <tr>
-    <th>Name</th>
-  </tr>  
-  </thead>
-  <tbody>
-    {{#each characters}}
-    <tr>
-      <td>...</td>
-      <td>{{name}}</td>
-      <td></td>
-    </tr>
-    {{/each}}
-  </tbody>
-</table>
-
  
+<body>
+  <div class="container">
+    <header>
+      <h1>Character List</h1>
+    </header>
+ 
+    <ul>
+      {{#each characters}}
+        {{> character}}
+      {{/each}}
+    </ul>
+  </div>
+</body>
+ 
+<template name="character">
+  <li>{{text}}</li>
 </template>
