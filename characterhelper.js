@@ -9,7 +9,8 @@ if (Meteor.isClient) {
   });
   
   Template.body.events({
-    "submit .new-character": function (event) {
+    "submit .new-character": function (event) 
+    {
       // Prevent default browser form submit
       event.preventDefault();
  
@@ -23,7 +24,15 @@ if (Meteor.isClient) {
  
       // Clear form
       event.target.text.value = "";
+    },
+    'click .name': function()
+    {
+    
+    console.log("You clicked a character element");
     }
+    
+    
+    
   });
   
   Template.character.events({
