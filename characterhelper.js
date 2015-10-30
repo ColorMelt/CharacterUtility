@@ -28,7 +28,7 @@ if (Meteor.isClient) {
     'click .name': function()
     {
     
-    console.log("You clicked a character element");
+    console.log("You clicked a");
     }
     
     
