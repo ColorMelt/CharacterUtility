@@ -20,18 +20,16 @@ var Player = function(id){
 			+
 			'">result</div>'
 			+
-			'<button class="kill" type="">Delete</button>'
+			'<button id="delete" class="deletebutton" type="input">Delete</button>'
 			+
 			'</div>'
-
+			
 			);
-		ele.attr({
-			id: this.id,
-		});
-		ele.addClass("thumbnail");
-		$("#charform").append(ele);
-
-		
+		//ele.attr({
+		//	id: this.id,
+		//});
+		//ele.addClass("thumbnail");
+		$(".characters").append(ele);	
 };
 
 
@@ -46,12 +44,8 @@ function main() {
 		charnum++;
 	}); //add char
 
-
-
-
 	$("#roll").click(function() 
 	{
-
 
 		//var stats = document.getElementsByClassName("initform").innerHTML;
 		var all = document.getElementsByClassName("result");
@@ -60,7 +54,7 @@ function main() {
 		for (var i=0, max=all.length; i < max; i++) 
 		{
 			var stats = document.getElementById(2000+i).value;
-			console.log(stats);
+			//console.log(stats);
 			var init = Number(stats) + Math.floor(Math.random() * 20);
 			document.getElementById(i).innerHTML = init;
 			//$('#'+i).append(init);
@@ -69,13 +63,18 @@ function main() {
 	//blocks.forEach(function(i) { i.drawblock(ctx);})	
 	});
 
-	$("#kill").click(function() 
+	$(".thumbnail .deletebutton").click(function(event) {
+		alert("message");
+	});
+	
+	/*
+	$(".thumbnail").click(function() 
 	{
 		//$(this.id).remove();
 		//alert(this.id);
-		alert("hey");
+		
 		//charnum--;
 	});
-
+	*/
 
 }; // main
