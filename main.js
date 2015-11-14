@@ -64,7 +64,7 @@ function main() {
 		{
 			var stats = document.getElementById(2000+i).value;
 			//console.log(stats);
-			var init = Number(stats) 1 + Math.floor(Math.random() * 20);
+			var init = Number(stats) + 1 + Math.floor(Math.random() * 20);
 			document.getElementById(i).innerHTML = init;
 			//$('#'+i).append(init);
 	     	//console.log(init);
