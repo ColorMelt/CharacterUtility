@@ -14,6 +14,11 @@ body {
 
 }
 
+.forms {
+  z-index: 1;
+  color: black;
+
+}
 .hero-spacer {
     margin-top: 50px;
 }
@@ -28,7 +33,7 @@ footer {
 
 .thumbnail {
 	background-color: #159957;
-  	background-image: linear-gradient(120deg, #155799, #159957); 
+  	background-image: linear-gradient(300deg, #155799, #159957); 
   	background-size: 100% auto;
 	
 }
@@ -67,9 +72,41 @@ footer {
        -o-transition: border .2s ease-in-out;
           transition: border .2s ease-in-out;
 }
-
-.result {
+.thumbnail .result {
   float: left;
+background: #222 url(/images/alert-overlay.png) repeat-x;
+display: inline-block;
+padding: 5px 10px 6px;
+color: #fff;
+text-decoration: none;
+font-weight: bold;
+line-height: 1;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+-moz-box-shadow: 0 1px 3px #999;
+-webkit-box-shadow: 0 1px 3px #999;
+text-shadow: 0 -1px 1px #222;
+border-bottom: 1px solid #222;
+position: relative;
+cursor: pointer;
+}
+.thumbnail .kill {
+float: right;
+background: #222 url(/images/alert-overlay.png) repeat-x;
+display: inline-block;
+padding: 5px 10px 6px;
+color: #fff;
+text-decoration: none;
+font-weight: bold;
+line-height: 1;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+-moz-box-shadow: 0 1px 3px #999;
+-webkit-box-shadow: 0 1px 3px #999;
+text-shadow: 0 -1px 1px #222;
+border-bottom: 1px solid #222;
+position: relative;
+cursor: pointer;
 
 }
 
@@ -94,4 +131,12 @@ cursor: pointer;
 .formstuff{
   color: black;
 
+}
+.charform{
+  background-color: black;
+  color: white;
+}
+.initform{
+  background-color: black;
+  color: white;
 }
