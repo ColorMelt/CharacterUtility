@@ -1,3 +1,11 @@
+//$("#delete").click(function (e){$(this).parent(".thumbnail").remove()})
+
+function removeChar(id)
+{
+		console.log(id);
+		$("#" + id).parent(".thumbnail").remove();
+}
+
 var players = [];
 var Player = function(id){
 		var ele = $(
@@ -20,23 +28,24 @@ var Player = function(id){
 			+
 			'">result</div>'
 			+
-			'<button id="delete" class="deletebutton" type="input">Delete</button>'
+			'<button onclick="removeChar('
+			+id+
+			')" id="delete" class="deletebutton" type="input">Delete</button>'
 			+
 			'</div>'
-			
 			);
 		//ele.attr({
 		//	id: this.id,
 		//});
 		//ele.addClass("thumbnail");
-		$(".characters").append(ele);	
+		$(".characters").append(ele);
 };
 
 
 
 function main() {
 	var charnum = 0;
-	$("#addChar").click(function() 
+	$("#addChar").click(function()
 	{
 		players.push(
 			new Player(charnum)
@@ -44,14 +53,14 @@ function main() {
 		charnum++;
 	}); //add char
 
-	$("#roll").click(function() 
+	$("#roll").click(function()
 	{
 
 		//var stats = document.getElementsByClassName("initform").innerHTML;
 		var all = document.getElementsByClassName("result");
 		//var inits = [];
 
-		for (var i=0, max=all.length; i < max; i++) 
+		for (var i=0, max=all.length; i < max; i++)
 		{
 			var stats = document.getElementById(2000+i).value;
 			//console.log(stats);
@@ -60,19 +69,21 @@ function main() {
 			//$('#'+i).append(init);
 	     	//console.log(init);
 		}
-	//blocks.forEach(function(i) { i.drawblock(ctx);})	
+	//blocks.forEach(function(i) { i.drawblock(ctx);})
 	});
+
+
 
 	$(".thumbnail .deletebutton").click(function(event) {
 		alert("message");
 	});
-	
+
 	/*
-	$(".thumbnail").click(function() 
+	$(".thumbnail").click(function()
 	{
 		//$(this.id).remove();
 		//alert(this.id);
-		
+
 		//charnum--;
 	});
 	*/
